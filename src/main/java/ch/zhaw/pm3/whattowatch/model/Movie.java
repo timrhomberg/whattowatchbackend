@@ -5,20 +5,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
 
 public class Movie {
-    private final UUID id;
-    private final String name;
+    private final String id;
+    private final int rank;
+    private final String title;
 
-    public Movie(@JsonProperty("id") UUID id,
-                  @JsonProperty("name") String name) {
+    public Movie(@JsonProperty("id") String id,
+                  @JsonProperty("rank") int rank,
+                  @JsonProperty("name") String title) {
         this.id = id;
-        this.name = name;
+        this.rank = rank;
+        this.title = title;
     }
 
-    public UUID getId() {
-        return id;
+    public String getId() {
+        return this.id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return this.title;
     }
 }

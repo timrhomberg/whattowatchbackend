@@ -1,5 +1,6 @@
 package ch.zhaw.pm3.whattowatch.service;
 
+import ch.zhaw.pm3.whattowatch.datasource.LocalMovieDAO;
 import ch.zhaw.pm3.whattowatch.datasource.MovieDAO;
 import ch.zhaw.pm3.whattowatch.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class MovieService {
         return movieDAO.getMovieList();
     }
 
-    public Optional<Movie> getMovietById(UUID id) {
-        return movieDAO.selectClientById(id);
+    public Optional<Movie> getMovieById(String id) {
+        return movieDAO.selectMovieById(id);
     }
 
     public boolean addMovie(Movie movie) {

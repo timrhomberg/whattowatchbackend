@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping("api/v1/movie")
+@RequestMapping("api/movie")
 @RestController
 public class MovieController {
     private final MovieService movieService;
@@ -24,8 +24,8 @@ public class MovieController {
     }
 
     @GetMapping(path = "{id}")
-    public Movie getSpecificMovie(@PathVariable("id")UUID id) {
-        return movieService.getMovietById(id)
+    public Movie getSpecificMovie(@PathVariable("id") String id) {
+        return movieService.getMovieById(id)
                 .orElse(null);
     }
 
