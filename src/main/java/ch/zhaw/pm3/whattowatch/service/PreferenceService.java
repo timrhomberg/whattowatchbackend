@@ -16,8 +16,8 @@ public class PreferenceService {
         this.preferenceDAO = preferenceDAO;
     }
 
-    public void addPreference(Movie movie) {
-
+    public int addPreference(int userid, Movie movie) {
+        return preferenceDAO.insertPreference(userid, movie);
     }
 
     public List<Movie> getPreference(int userid) {

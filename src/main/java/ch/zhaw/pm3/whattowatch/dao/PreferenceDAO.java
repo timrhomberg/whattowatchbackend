@@ -37,4 +37,19 @@ public class PreferenceDAO {
         );
         return preferenceList;
     }
+
+    /**
+     *
+     * @param userid
+     * @param movie
+     * @return Returns the count of effected rows.
+     */
+    public int insertPreference(int userid, Movie movie) {
+        String sql = "INSERT INTO preference (userid, movieid) VALUES (?, ?)";
+        return jdbcTemplate.update(
+                sql,
+                userid,
+                movie.getId()
+        );
+    }
 }

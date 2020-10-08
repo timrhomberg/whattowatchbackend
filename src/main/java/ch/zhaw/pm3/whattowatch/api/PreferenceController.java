@@ -18,8 +18,8 @@ public class PreferenceController {
     }
 
     @PostMapping
-    public void addPreference(@RequestBody Movie movie) {
-        preferenceService.addPreference(movie);
+    public int addPreference(@RequestBody Movie movie) {
+        return preferenceService.addPreference(1, movie);
     }
 
     @GetMapping(path = "{userid}")
