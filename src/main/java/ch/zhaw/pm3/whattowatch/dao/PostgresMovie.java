@@ -31,7 +31,7 @@ public class PostgresMovie implements MovieDAO {
 
     @Override
     public List<Movie> getMovieList() {
-        final String sql = "SELECT id, rank, title, fullTitle, year, imdbRating, imdbRatingCount from movie";
+        final String sql = "SELECT id, rank, title, \"fullTitle\", year, \"imdbRating\", \"imdbRatingCount\" from movie";
         return jdbcTemplate.query(sql, (resultSet,i) -> {
             String id = resultSet.getString("id");
             int rank = resultSet.getInt("rank");
