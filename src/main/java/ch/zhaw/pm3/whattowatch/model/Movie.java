@@ -31,10 +31,30 @@ public class Movie {
     }
 
     public String getId() {
-        return this.id;
+        return id;
+    }
+
+    public int getRank() {
+        return rank;
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
+    }
+
+    public String getFullTitle() {
+        return fullTitle;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public float getImdbRating() {
+        return imdbRating;
+    }
+
+    public int getImdbRatingCount() {
+        return imdbRatingCount;
     }
 }
