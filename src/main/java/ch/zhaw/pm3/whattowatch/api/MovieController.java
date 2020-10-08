@@ -6,9 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
-@RequestMapping("api/movie")
+@RequestMapping("api/v1/movie")
 @RestController
 public class MovieController {
     private final MovieService movieService;
