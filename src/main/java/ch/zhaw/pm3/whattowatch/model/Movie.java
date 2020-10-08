@@ -2,9 +2,6 @@ package ch.zhaw.pm3.whattowatch.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Calendar;
-import java.util.UUID;
-
 public class Movie {
     private final String id;
     private final int rank;

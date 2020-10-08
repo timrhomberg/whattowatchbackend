@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("api/algorithm")
+@RequestMapping("api/v1/algorithm")
 @RestController
 public class AlgorithmController {
     private final AlgorithmService algorithmService;
