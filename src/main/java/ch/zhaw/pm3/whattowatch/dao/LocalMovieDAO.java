@@ -1,20 +1,15 @@
-package ch.zhaw.pm3.whattowatch.datasource;
+package ch.zhaw.pm3.whattowatch.dao;
 
 import ch.zhaw.pm3.whattowatch.model.Movie;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
-@Component
+@Repository("LocalMovieDB")
 public class LocalMovieDAO implements MovieDAO {
     List<Movie> movieList = new ArrayList<>();
-
-    public LocalMovieDAO() {
-        movieList.add(new Movie("test", 0, "rhomberg"));
-    }
 
     public Optional<Movie> selectMovieById(String id) {
         return movieList.stream()
@@ -23,8 +18,8 @@ public class LocalMovieDAO implements MovieDAO {
     }
 
     @Override
-    public boolean insertMovie(Movie movie) {
-        return movieList.add(movie);
+    public int insertMovie(Movie movie) {
+        return movieList.add(movie) ? 1 : 0;
     }
 
     @Override
