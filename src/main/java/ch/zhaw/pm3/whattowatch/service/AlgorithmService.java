@@ -13,8 +13,4 @@ public class AlgorithmService {
         recommendationList.add(new Movie("1", 1, "Avengers", "ave", "2019", 9.90f, 100));
         return recommendationList;
     }
-
-    public void addPreference(Movie movie) {
-        
-    }
 }

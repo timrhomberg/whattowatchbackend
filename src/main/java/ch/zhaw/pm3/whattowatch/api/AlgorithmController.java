@@ -21,9 +21,4 @@ public class AlgorithmController {
     public List<Movie> getSpecificRecommendations(@PathVariable("count") int count) {
         return algorithmService.getSpecificRecommendations(count);
     }
-
-    @PostMapping
-    public void addPreference(@RequestBody Movie movie) {
-        algorithmService.addPreference(movie);
-    }
 }

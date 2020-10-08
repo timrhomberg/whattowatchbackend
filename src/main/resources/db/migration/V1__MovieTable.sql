@@ -1,0 +1,16 @@
+CREATE TABLE movie (
+    id VARCHAR(255) NOT NULL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE authorities (
+    username VARCHAR(255) NOT NULL,
+    authority VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE User(
+    id UUID NOT NULL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    enabled BOOLEAN NOT NULL
+);
