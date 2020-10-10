@@ -1,4 +1,4 @@
-package ch.zhaw.pm3.whattowatch.jwt;
+package ch.zhaw.pm3.whattowatch.security;
 
 import ch.zhaw.pm3.whattowatch.service.JwtUserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;

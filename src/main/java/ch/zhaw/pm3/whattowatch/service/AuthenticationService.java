@@ -1,6 +1,6 @@
 package ch.zhaw.pm3.whattowatch.service;
 
-import ch.zhaw.pm3.whattowatch.jwt.JwtTokenUtil;
+import ch.zhaw.pm3.whattowatch.security.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;

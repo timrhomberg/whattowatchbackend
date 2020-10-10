@@ -1,4 +1,4 @@
-package ch.zhaw.pm3.whattowatch.jwt;
+package ch.zhaw.pm3.whattowatch.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

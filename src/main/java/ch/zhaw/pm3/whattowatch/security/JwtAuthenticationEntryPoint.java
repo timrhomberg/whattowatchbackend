@@ -1,4 +1,4 @@
-package ch.zhaw.pm3.whattowatch.jwt;
+package ch.zhaw.pm3.whattowatch.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
