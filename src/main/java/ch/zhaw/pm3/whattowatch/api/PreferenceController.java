@@ -22,8 +22,8 @@ public class PreferenceController {
         return preferenceService.addPreference(1, movie);
     }
 
-    @GetMapping(path = "{userid}")
-    public List<Movie> getPreference(@PathVariable("userid") int userid) {
-        return preferenceService.getPreference(userid);
+    @GetMapping
+    public List<Movie> getPreference() {
+        return preferenceService.getPreference();
     }
 }
