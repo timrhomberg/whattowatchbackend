@@ -2,7 +2,6 @@ package ch.zhaw.pm3.whattowatch.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 

@@ -21,7 +21,7 @@ public class PreferenceDAO {
                 "    FROM movie m\n" +
                 "    INNER JOIN preference p on m.id = p.movieid\n" +
                 "    INNER JOIN user u on p.userid = ?";
-        List<Movie> preferenceList = jdbcTemplate.query(
+        return jdbcTemplate.query(
                 sql,
                 new Object[]{userid},
                 (resultSet,i) -> {
@@ -35,7 +35,6 @@ public class PreferenceDAO {
                     return new Movie(id, rank, title, fullTitle, year, imdbRating, imdbRatingCount);
                 }
         );
-        return preferenceList;
     }
 
     /**

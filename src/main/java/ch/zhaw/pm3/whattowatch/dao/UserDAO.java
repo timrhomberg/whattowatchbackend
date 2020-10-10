@@ -45,8 +45,7 @@ public class UserDAO {
                 sql,
                 new Object[]{queryUsername},
                 (resultSet,i) -> {
-                    int userid = Integer.parseInt(resultSet.getString("id"));
-                    return userid;
+                    return Integer.parseInt(resultSet.getString("id"));
                 });
     }
 }
